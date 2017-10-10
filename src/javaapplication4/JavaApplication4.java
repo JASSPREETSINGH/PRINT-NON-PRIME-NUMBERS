@@ -19,12 +19,13 @@ public class JavaApplication4 {
      int upperbound=100;
         for (int num = 2; num < upperbound; num++) {
             {
-                int maxfac=(int) Math.sqrt(num);
+                int maxfac=(int)Math.sqrt(num);
                 
-                for (int j = 2; j < maxfac; j++) {
+                for (int j = 2; j <= maxfac; j++) {
                     if(num%j==0)
                     {
                         System.out.println(num+"is not prime");
+                        break;
                     }
                 }
                 
