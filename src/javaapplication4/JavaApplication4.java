@@ -12,18 +12,16 @@ package javaapplication4;
 public class JavaApplication4 {
   public static void main(String[] args) {
 
-        Boolean prime = true;
+        
         int upperbound = 100;
         for (int i = 2; i < upperbound; i++) {
+            Boolean prime = true;
             int maxfac = (int) Math.sqrt(i);
             for (int j = 2; j <= maxfac; j++) {
                 if (i % j == 0) {
                     prime = false;
                     break;
-                } else {
-                    prime = true;
-
-                }
+                } 
                 
             }
             if (!prime) {
