@@ -10,28 +10,27 @@ package javaapplication4;
  * @author Dell
  */
 public class JavaApplication4 {
+  public static void main(String[] args) {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-     
-     int upperbound=100;
-        for (int num = 2; num < upperbound; num++) {
-            {
-                int maxfac=(int)Math.sqrt(num);
-                
-                for (int j = 2; j <= maxfac; j++) {
-                    if(num%j==0)
-                    {
-                        System.out.println(num+"is not prime");
-                        break;
-                    }
+        Boolean prime = true;
+        int upperbound = 100;
+        for (int i = 2; i < upperbound; i++) {
+            int maxfac = (int) Math.sqrt(i);
+            for (int j = 2; j <= maxfac; j++) {
+                if (i % j == 0) {
+                    prime = false;
+                    break;
+                } else {
+                    prime = true;
+
                 }
                 
             }
+            if (!prime) {
+                    System.out.println("the non prime no are" + i);
+
+                }
         }
-// TODO code application logic here
     }
     
 }
